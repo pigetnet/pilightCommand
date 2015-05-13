@@ -1,0 +1,7 @@
+#!/bin/bash
+description "radio433 Status"
+messagebox "Type [CTRL-C] to quit"
+echo "Status"
+supervisorctl status radio433Triggers
+echo "Log"
+tail -f /var/log/radio433Triggers.log

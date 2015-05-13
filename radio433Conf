@@ -1,0 +1,4 @@
+#!/bin/bash
+description "Opening pilight configuration"
+messagebox "donate to pilight at http://www.pilight.org"
+nano /etc/pilight/config.json

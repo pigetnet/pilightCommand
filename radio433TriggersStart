@@ -1,0 +1,3 @@
+#!/bin/bash
+service pilight restart
+supervisorctl start radio433Triggers

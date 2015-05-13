@@ -1,0 +1,3 @@
+#!/bin/bash
+messagebox  "donate to pilight at http://www.pilight.org/"
+python -u /opt/piget/radio433Triggers/trigger/pilight2trigger.py
