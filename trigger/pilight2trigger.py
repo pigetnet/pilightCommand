@@ -20,7 +20,7 @@ from lib import TriggersINI
 
 #Commands.send("printenv")
 Commands.send("ledBlink 0")
-configurationFile = "/boot/bootstrap/config/radio433Triggers.cfg"
+configurationFile = "/boot/piget/config/radio433Triggers.cfg"
 sys.stdout.write("Radio Triggers ON\n")
 
 #Get triggers from configuration file

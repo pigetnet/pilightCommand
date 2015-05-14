@@ -9,7 +9,7 @@ import os
 import ConfigParser
 from subprocess import call
 
-configurationFile = "/boot/bootstrap/config/radio433Triggers.cfg"
+configurationFile = "/boot/piget/config/radio433Triggers.cfg"
 
 #Read the configuration files
 settings = ConfigParser.ConfigParser()

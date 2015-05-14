@@ -1,3 +1,3 @@
 #!/bin/bash
-nano /boot/bootstrap/config/radio433Triggers.cfg
+nano /boot/piget/config/radio433Triggers.cfg
 radio433TriggersRestart
