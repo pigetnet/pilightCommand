@@ -1,6 +1,7 @@
 #!/bin/bash
 installer supervisor
 cat <<\EOF > /etc/supervisor/conf.d/radio433Triggers.conf
+[program: radio433Triggers]
 command=/opt/piget/radio433Triggers/radio433Triggers
 autostart=true
 autorestart=true
