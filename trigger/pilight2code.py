@@ -30,7 +30,8 @@ try:
         buffer = pilightSocket.recv(1024)
         #Check if a radiocode exists and format it in a small format
         radiocode = PiLight.getRadioCode(buffer)
-        print radiocode          
+        if radiocode != False:
+            print radiocode          
 except KeyboardInterrupt:
     sys.stdout.write("-----------------------\n")
     sys.stdout.write("Radio Sniffer OFF\n")
