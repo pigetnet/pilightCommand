@@ -18,7 +18,7 @@ import os
 
 #Search for pilight socket
 def discover(service, timeout=2, retries=1):
-	group = ("127.0.0.1", 1900)
+	group = ("239.255.255.250", 1900)
 	message = "\r\n".join([
 		'M-SEARCH * HTTP/1.1',
 		'HOST: {0}:{1}'.format(*group),
@@ -64,10 +64,6 @@ def getInfo():
 #Connect and identify
 def connect():
 	location, port = getInfo()
-	#location = "127.0.0.1"
-	#port = 5000
-	#print location
-	#print port
 	#Generate socket	
 	pilightSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	socket.setdefaulttimeout(0)

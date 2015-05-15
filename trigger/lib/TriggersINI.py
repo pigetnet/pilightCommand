@@ -28,7 +28,7 @@ def openConfiguration(configurationFile):
 		else:
 			return False
 	else:
-		sys.stdout.write(configurationFile + " doesn't exists!")
+		sys.stdout.write(configurationFile + " doesn't exists!\n")
 		return False
 	return False
 
