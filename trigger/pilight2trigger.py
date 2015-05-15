@@ -45,6 +45,8 @@ try:
 		buffer = pilightSocket.recv(1024)
 		#Check if a radiocode exists and format it in a small format
 		radiocode = PiLight.getRadioCode(buffer)
+		if radiocode != False:
+			sys.stdout.write("CODE: "+radiocode+"\n")
 
 		action = TriggersINI.checkTrigger(triggers,radiocode)
 		if action != False:

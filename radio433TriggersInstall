@@ -1,11 +1,11 @@
 #!/bin/bash
 installer supervisor
 cat <<\EOF > /etc/supervisor/conf.d/radio433Triggers.conf
-[program:radio433Triggers]
-command=python /opt/piget/radio433Triggers/trigger/pilight2trigger.py
-autostart=false
-autorestart=false
+command=/opt/piget/radio433Triggers/radio433Triggers
+autostart=true
+autorestart=true
 stdout_logfile=/var/log/radio433Triggers.log
+redirect_stderr=true
 EOF
 supervisorctl reread
 supervisorctl update
