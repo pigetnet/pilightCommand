@@ -1,2 +1,7 @@
 #!/bin/bash
-echo "Put autoinstallation for pilight"
+description "We need pilight to triggers actions with radiocode"
+messagebox  "donate to pilight at http://www.pilight.org/"
+
+messagebox "Add Repository apt.pilight.org and key"
+addAptRepository "deb http://apt.pilight.org/ stable main" "http://apt.pilight.org/pilight.key"
+installer pilight
