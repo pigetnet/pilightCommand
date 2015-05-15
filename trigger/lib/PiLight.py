@@ -63,9 +63,9 @@ def getInfo():
 
 #Connect and identify
 def connect():
-	#location, port = getInfo()
-	location = "127.0.0.1"
-	port = 5000
+	location, port = getInfo()
+	#location = "127.0.0.1"
+	#port = 5000
 	#print location
 	#print port
 	#Generate socket	
