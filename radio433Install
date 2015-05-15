@@ -4,4 +4,5 @@ messagebox  "donate to pilight at http://www.pilight.org/"
 
 messagebox "Add Repository apt.pilight.org and key"
 addAptRepository "deb http://apt.pilight.org/ stable main" "http://apt.pilight.org/pilight.key"
+apt-get update
 installer pilight
