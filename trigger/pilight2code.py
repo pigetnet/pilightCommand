@@ -17,9 +17,10 @@ import sys
 from lib import PiLight
 
 #Connect to pilight-daemon
+sys.stdout.write("Collector: pilight-daemon\n")
 pilightSocket = PiLight.connect();
 
-sys.stdout.write("Collector: pilight-daemon\n")
+
 sys.stdout.write("--------------------------\n")
 sys.stdout.write("waiting for code...\n")
 sys.stdout.write("To exit press [Ctrl-C]\n")

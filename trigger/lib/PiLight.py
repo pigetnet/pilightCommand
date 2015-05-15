@@ -56,9 +56,9 @@ def getInfo():
 	if len(responses) > 0:
 		locationsrc = re.search('Location:([0-9.]+):(.*)', str(responses[0]), re.IGNORECASE)
 		if locationsrc:
-			location = "127.0.0.1"
-			#location = locationsrc.group(1)
+			location = locationsrc.group(1)
 			port = locationsrc.group(2)
+			print location + ":" + str(port)
 			return (location,port)
 
 #Connect and identify
