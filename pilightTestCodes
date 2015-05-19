@@ -2,4 +2,4 @@
 description "Check if pilight receive radiocode"
 messagebox  "donate to pilight at http://www.pilight.org/"
 
-python /opt/piget/radio433Triggers/trigger/pilight2code.py
+python /opt/piget/pilightCommand/trigger/pilight2code.py

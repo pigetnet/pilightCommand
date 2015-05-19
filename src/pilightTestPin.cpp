@@ -1,8 +1,8 @@
 /*
-  rftester.cpp
+  pilightTestPin
   by Sarrailh Remi
 
-  Description : This program test your RF receiver
+  Description : This program test if a Radio receiver is plugged by checking if gpio change
 */
 
 #include <stdlib.h>

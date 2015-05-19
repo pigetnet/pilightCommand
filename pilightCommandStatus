@@ -1,0 +1,7 @@
+#!/bin/bash
+description "pilightCommand Status"
+messagebox "Type [CTRL-C] to quit"
+description "Status"
+supervisorctl status pilightCommand
+description "Log"
+tail -f /var/log/pilightCommand.log

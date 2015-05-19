@@ -1,7 +1,0 @@
-#!/bin/bash
-description "Removing radio433Triggers service"
-supervisorctl stop radio433Triggers
-autoBackup /etc/supervisor/conf.d/radio433Triggers.conf
-rm -f /etc/supervisor/conf.d/radio433Triggers.conf
-supervisorctl reread
-supervisorctl update
