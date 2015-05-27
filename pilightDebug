@@ -1,0 +1,3 @@
+#!/bin/bash
+service pilight stop
+pilight-debug

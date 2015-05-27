@@ -1,11 +1,11 @@
 #!/bin/bash
 installer supervisor
-cat <<\EOF > /etc/supervisor/conf.d/radio433Triggers.conf
-[program: radio433Triggers]
-command=/opt/piget/radio433Triggers/radio433Triggers
+cat <<\EOF > /etc/supervisor/conf.d/pilightCommand.conf
+[program: pilightCommand]
+command=/opt/piget/pilightCommand/pilightCommand
 autostart=true
 autorestart=true
-stdout_logfile=/var/log/radio433Triggers.log
+stdout_logfile=/var/log/pilightCommand.log
 redirect_stderr=true
 EOF
 supervisorctl reread
