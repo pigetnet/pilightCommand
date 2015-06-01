@@ -1,7 +1,7 @@
 #!/bin/bash
 installer supervisor
 cat <<\EOF > /etc/supervisor/conf.d/pilightCommand.conf
-[program: pilightCommand]
+[program:pilightCommand]
 command=/opt/piget/pilightCommand/pilightCommand
 autostart=true
 autorestart=true
