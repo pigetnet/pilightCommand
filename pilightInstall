@@ -8,5 +8,5 @@ addAptRepository "deb http://apt.pilight.org/ stable main" "http://apt.pilight.o
 messagebox "Update APT-GET sources"
 apt-get update
 
-messagebox "Install piglight"
+messagebox "Install pilight"
 installer pilight
