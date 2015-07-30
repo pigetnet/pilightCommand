@@ -1,3 +1,4 @@
 #!/bin/bash
+/show/listecho "Start pilight/pilightCommand" $OK
 service pilight start
 supervisorctl start pilightCommand

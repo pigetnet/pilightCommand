@@ -1,0 +1,4 @@
+#!/bin/bash
+/show/listecho "Restarting pilightCommand" $OK
+/do/pilightCommand/stop
+/do/pilightCommand/start

@@ -1,3 +1,4 @@
 #!/bin/bash
+/show/listecho "Stop pilight/pilightCommand" $ERR
 supervisorctl stop pilightCommand
 service pilight stop

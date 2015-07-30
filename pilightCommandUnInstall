@@ -1,7 +1,0 @@
-#!/bin/bash
-description "Removing pilightCommand service"
-supervisorctl stop pilightCommand
-autoBackup /etc/supervisor/conf.d/pilightCommand.conf
-rm -f /etc/supervisor/conf.d/pilightCommand.conf
-supervisorctl reread
-supervisorctl update

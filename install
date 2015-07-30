@@ -1,0 +1,25 @@
+#!/bin/bash
+/show/description "Install pilightCommand as a service"
+
+/system/downloadModule pilight
+/do/pilight/install
+
+/system/install supervisor
+cat <<\EOF > /etc/supervisor/conf.d/pilightCommand.conf
+[program:pilightCommand]
+command=/opt/piget/pilightCommand/start
+autostart=true
+autorestart=true
+stdout_logfile=/var/log/pilightCommand.log
+redirect_stderr=true
+EOF
+supervisorctl reread
+supervisorctl update
+
+/show/listecho "Copy config files" $OK
+/system/makedir /opt/user/config/pilight
+if [ -z "/boot/piget/config/pilight/pilightCommand.cfg" ];then
+	cp -v /boot/piget/config/pilight/pilightCommand.cfg /opt/user/config/pilight/pilightCommand.cfg
+else
+	cp -v /opt/piget/pilightCommand/default/pilightCommand.cfg /opt/user/config/pilight/pilightCommand.cfg
+fi

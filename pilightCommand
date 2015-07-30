@@ -1,3 +1,2 @@
 #!/bin/bash
-. /opt/piget/core/install/extendPath
-exec python -u /opt/piget/pilightCommand/trigger/pilightCommand.py
+exec python -u /opt/piget/pilightCommand/python/pilightCommand.py
