@@ -3,5 +3,5 @@
 /show/listecho  "PRESS [CTRL-C] to quit" $WARN
 /show/listecho "Supervisor status" $OK
 supervisorctl status pilightCommand
-description "Pilight Command log" $OK
+/show/description "Pilight Command log" $OK
 tail -f /var/log/pilightCommand.log

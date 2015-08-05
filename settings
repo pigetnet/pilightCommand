@@ -1,3 +1,4 @@
 #!/bin/bash
 nano /opt/user/config/pilight/pilightCommand.cfg
 /do/pilightCommand/restart
+/do/pilightCommand/log

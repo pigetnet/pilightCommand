@@ -1,13 +1,15 @@
 #!/bin/bash
 /show/description "Install pilightCommand as a service"
 
-/system/downloadModule pilight
-/do/pilight/install
+if [ ! -f "/etc/pilight/config.json" ];then
+	/system/downloadModule pilight
+	/do/pilight/install
+fi
 
 /system/install supervisor
 cat <<\EOF > /etc/supervisor/conf.d/pilightCommand.conf
 [program:pilightCommand]
-command=/opt/piget/pilightCommand/start
+command=/do/pilightCommand/check
 autostart=true
 autorestart=true
 stdout_logfile=/var/log/pilightCommand.log
