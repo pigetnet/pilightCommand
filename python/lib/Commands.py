@@ -6,9 +6,13 @@ import sys
 """
 "Send commands"
 """
+
+
 def sendCommandThreaded(command):
-	result = subprocess.check_output([command], shell=True)
-	sys.stdout.write(result)
+    result = subprocess.check_output([command], shell=True)
+    sys.stdout.write(result)
+
+
 def send(command):
-	commandThread = threading.Thread(target=sendCommandThreaded,args=(command,))
-	commandThread.start()
+    commandThread = threading.Thread(target=sendCommandThreaded, args=(command,))
+    commandThread.start()
