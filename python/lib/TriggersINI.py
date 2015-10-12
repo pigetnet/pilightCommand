@@ -51,7 +51,6 @@ def CheckConfiguration(settings):
 # Check trigger (code exists ? is action lock?)
 def checkTrigger(triggers, codeToCheck):
     if codeToCheck is not False:
-
         # Each sections is a code
         codesTriggers = triggers.sections()
 
@@ -61,7 +60,7 @@ def checkTrigger(triggers, codeToCheck):
         # If codes exists check lock
         if codeExists:
             lock = checkLock(triggers, codeToCheck)
-            if lock is not False:
+            if lock is False:
                 return triggers.get(codeToCheck, "action")
         else:
             return False

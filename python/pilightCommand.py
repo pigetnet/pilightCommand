@@ -48,6 +48,7 @@ try:
             sys.stdout.write("CODE: "+radiocode+"\n")
 
         action = TriggersINI.checkTrigger(triggers, radiocode)
+
         if action is not False:
             sys.stdout.write("\n")
             sys.stdout.write("COMMAND: "+action+"\n")
